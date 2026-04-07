@@ -1,0 +1,32 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+</head>
+<body>
+
+<h1>📅 Attendance Record</h1>
+
+<table border="1">
+    <tr>
+        <th>Date</th>
+        <th>Punch In</th>
+        <th>Punch Out</th>
+        <th>Status</th>
+    </tr>
+
+    {% for row in records %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">⬅ Back to Dashboard</a>
+
+</body>
+</html>
